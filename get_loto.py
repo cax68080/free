@@ -51,5 +51,6 @@ def get_num(num):
             return "引数エラー"
     else:
         "引数エラー"
-print(pred_loto("n3"))
+ptn = input("くじの種類を入力してください。(ロト７:l7、ロト６:l6、ミニロト:ml、ナンバーズ３:n3、ナンバーズ４:n4)： ")
+print(pred_loto(ptn))
     
