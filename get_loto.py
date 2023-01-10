@@ -20,7 +20,9 @@ def get_loto(num,cnt):
         s = rd.randint(1,num)
         set_num.add(s)
         if len(set_num) == cnt:
-            return list(set_num)
+            list_loto = list(set_num)
+            list_loto.sort(key=None,reverse=False)
+            return list_loto
             break
 
 def get_num(num):
