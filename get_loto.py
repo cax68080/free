@@ -11,6 +11,11 @@ def pred_loto(ptn):
         return get_num(3) 
     elif ptn == "n4":
         return get_num(4)
+    elif ptn == "b5":
+        return bingo5()
+    elif ptn == "ks":
+        return kisekae()
+
     else:
         return "引数がまちがっています。"
 def get_loto(num,cnt):
@@ -53,6 +58,26 @@ def get_num(num):
             return "引数エラー"
     else:
         "引数エラー"
-ptn = input("くじの種類を入力してください。(ロト７:l7、ロト６:l6、ミニロト:ml、ナンバーズ３:n3、ナンバーズ４:n4)： ")
+def bingo5():
+    result = []
+    s = 1
+    e = 5
+    r = 0
+    for _ in range(8):
+        r = rd.randint(s,e)
+        result.append(r)
+        r = 0
+        s += 5
+        e += 5
+    return result
+
+def kisekae():
+    sel_list = ["メロン","ぶどう","みかん","もも","りんご"]
+    result = []
+    for _ in range(4):
+        result.append(sel_list[rd.randint(0,4)])
+    return result
+
+ptn = input("くじ入力。(ロト７:l7、ロト６:l6、ミニロト:ml、ナンバーズ３:n3、ナンバーズ４:n4、BINGO5:b5、きせかえ:ks)： ")
 print(pred_loto(ptn))
     
