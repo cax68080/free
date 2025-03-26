@@ -75,7 +75,7 @@ def kisekae():
     sel_list = ["メロン","ぶどう","みかん","もも","りんご"]
     result = []
     for _ in range(4):
-        result.append(sel_list[rd.randint(0,4)])
+        result.append(sel_list[rd.randint(0,4)] + " ")
     return result
 
 ptn = input("くじ入力。(ロト７:l7、ロト６:l6、ミニロト:ml、ナンバーズ３:n3、ナンバーズ４:n4、BINGO5:b5、きせかえ:ks)： ")
